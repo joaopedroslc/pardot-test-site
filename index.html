@@ -3,58 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pardot A/B Test Page (Parent)</title>
+    <title>Pardot Form Test</title>
 </head>
 <body>
-    <h1 style="text-align: center;">Pardot A/B Test (Random Version Display)</h1>
-    <p style="text-align: center;">
-        The form below randomly displays either Version A or Version B.
-    </p>
-
-    <!-- Placeholder to display the version received from iframe -->
-    <p style="text-align: center; font-weight: bold; color: blue;">
-        Parent Page Received Version: <span id="receivedVersion">Waiting...</span>
-    </p>
-
-    <!-- Your SINGLE Pardot Form Embed Code -->
+    <!-- Your Pardot Iframe Code -->
+    <!-- The 'height' attribute has been increased to make the form bigger. -->
     <iframe
-        src="https://www3.lenoxsoft.com/l/1039151/2025-05-28/3l5j3b" <!-- Use your actual Pardot form URL -->
+        src="https://www3.lenoxsoft.com/l/1039151/2025-05-28/3l5j3b"
         width="100%"
-        height="1800"
+        height="1200" <!-- Increased height significantly -->
         type="text/html"
         frameborder="0"
         allowTransparency="true"
         style="border: 0;"
-        title="Pardot A/B Test Form"
+        title="Pardot Form"
     >
         Your browser does not support iframes.
     </iframe>
-
-    <script>
-        // Element to display the received version
-        const receivedVersionSpan = document.getElementById('receivedVersion');
-
-        // Listen for messages from any origin (including the Pardot iframe)
-        window.addEventListener('message', function(event) {
-            // IMPORTANT: Verify the origin for security in a production environment!
-            // event.origin will be 'https://www3.lenoxsoft.com' in your case.
-            // if (event.origin !== 'https://www3.lenoxsoft.com') {
-            //     console.warn('Message received from unexpected origin:', event.origin);
-            //     return;
-            // }
-
-            // Check if the message is the one we sent from the Pardot iframe
-            if (event.data && event.data.type === 'pardot_form_version') {
-                const version = event.data.version;
-                receivedVersionSpan.textContent = version;
-                console.log('Parent Page: Received form version from iframe:', version);
-
-                // You can now use the 'version' variable here for other logic on your parent page!
-                // For example, trigger an analytics event, change content, etc.
-            }
-        });
-
-        console.log('Parent Page: Listening for messages from iframe...');
-    </script>
 </body>
 </html>
