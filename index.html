@@ -3,29 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pardot A/B Test Page (Parent)</title>
+    <title>Pardot Form Test</title>
 </head>
 <body>
-    <h1 style="text-align: center;">Pardot A/B Test (Random Version Display)</h1>
-    <p style="text-align: center;">
-        The form below randomly displays either Version A or Version B.
-    </p>
-
-    <!-- Placeholder to display the version received from iframe -->
-    <p style="text-align: center; font-weight: bold; color: blue;">
-        Parent Page Received Version: <span id="receivedVersion">Waiting...</span>
-    </p>
-
-    <!-- Your SINGLE Pardot Form Embed Code -->
+    <!-- Your Pardot Iframe Code -->
+    <!-- The 'height' attribute has been increased to make the form bigger. -->
     <iframe
-        src="https://www3.lenoxsoft.com/l/1039151/2025-05-28/3l5j3b" <!-- Use your actual Pardot form URL -->
+        src="https://www3.lenoxsoft.com/l/1039151/2025-05-28/3l5j3b"
         width="100%"
-        height="1200"
+        height="1200" <!-- Increased height significantly -->
         type="text/html"
         frameborder="0"
         allowTransparency="true"
         style="border: 0;"
-        title="Pardot A/B Test Form"
+        title="Pardot Form"
     >
         Your browser does not support iframes.
     </iframe>
