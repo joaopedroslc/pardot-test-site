@@ -29,32 +29,5 @@
     >
         Your browser does not support iframes.
     </iframe>
-
-    <script>
-        // Element to display the received version
-        const receivedVersionSpan = document.getElementById('receivedVersion');
-
-        // Listen for messages from any origin (including the Pardot iframe)
-        window.addEventListener('message', function(event) {
-            // IMPORTANT: Verify the origin for security in a production environment!
-            // event.origin will be 'https://www3.lenoxsoft.com' in your case.
-            // if (event.origin !== 'https://www3.lenoxsoft.com') {
-            //     console.warn('Message received from unexpected origin:', event.origin);
-            //     return;
-            // }
-
-            // Check if the message is the one we sent from the Pardot iframe
-            if (event.data && event.data.type === 'pardot_form_version') {
-                const version = event.data.version;
-                receivedVersionSpan.textContent = version;
-                console.log('Parent Page: Received form version from iframe:', version);
-
-                // You can now use the 'version' variable here for other logic on your parent page!
-                // For example, trigger an analytics event, change content, etc.
-            }
-        });
-
-        console.log('Parent Page: Listening for messages from iframe...');
-    </script>
 </body>
 </html>
