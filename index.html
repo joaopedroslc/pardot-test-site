@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pardot Form Test Site</title>
+    <!-- Tailwind CSS CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Optional: Custom styles if needed, though Tailwind covers most common needs */
+        body {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-2xl">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+            My Pardot Form Test Page
+        </h1>
+        <p class="text-gray-600 mb-8 text-center">
+            Paste your Pardot iframe embed code below. This page is set up to help you test how your form appears and functions within a web environment.
+        </p>
+
+        <!-- START: Your Pardot Iframe Code Goes Here -->
+        <!-- Replace the example iframe below with the actual iframe code provided by Pardot. -->
+        <!-- Make sure to update the 'src' attribute with your Pardot form URL. -->
+        <!-- You might need to adjust the 'height' attribute for optimal display, -->
+        <!-- or consider using JavaScript to dynamically resize the iframe based on its content. -->
+        <div class="border-2 border-dashed border-gray-300 p-4 rounded-md bg-gray-50 flex items-center justify-center min-h-48">
+			<iframe
+                src="http://www3.lenoxsoft.com/l/1039151/2025-05-28/3l5j3b" <!-- IMPORTANT: This is your Pardot form URL from the screenshot -->
+                width="100%"
+                height="600" <!-- Adjust height as needed, or implement dynamic resizing -->
+                type="text/html"
+                frameborder="0"
+                allowTransparency="true"
+                style="border: 0; min-height: 400px;"
+                title="Pardot Form"
+            >
+                Your browser does not support iframes.
+            </iframe>
+        </div>
+        <!-- END: Your Pardot Iframe Code Goes Here -->
+
+        <p class="text-sm text-gray-500 mt-8 text-center">
+            Remember to test in an incognito window and verify all completion actions!
+        </p>
+    </div>
+</body>
+</html>
